@@ -1,4 +1,5 @@
-FROM ubuntu:latest
+FROM ubuntu:20.04
 LABEL authors="michael"
-
-ENTRYPOINT ["top", "-b"]
+COPY webook /app/webook
+WORKDIR /app
+CMD ["/app/webook"]
